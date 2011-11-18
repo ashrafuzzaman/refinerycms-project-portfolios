@@ -8,6 +8,7 @@ class ProjectPortfoliosController < ApplicationController
     # you can use meta fields from your model instead (e.g. browser_title)
     # by swapping @page for @project_portfolio in the line below:
     present(@page)
+    @tags = ProjectPortfolio.tag_counts_on(:tags)
   end
 
   def show

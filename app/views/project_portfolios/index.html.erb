@@ -1,17 +1,42 @@
-
-
-<% content_for :before_javascript_libraries do %>
-    <%= javascript_include_tag "jquery.quicksand.js" %>
-<% end %>
-
 <% content_for :body_content_left do %>
-  <ul id="project_portfolios">
+<form id="filter">
+    <fieldset>
+        <legend>
+            Tags
+        </legend>
+        <label><a href="#">all</a></label>
+        <% @tags.each do |tag| %>
+            <label><a href="#"><%= tag.name %> </a></label>
+        <% end %>
+    </fieldset>
+</form>
+
+<ul id="project_portfolios">
     <% @project_portfolios.each do |project_portfolio| %>
-      <li>
-        <%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %>
-      </li>
+    <li data-id="id-1" data-type="<%= project_portfolio.tag_list %>">
+        <%= load_thumbnail project_portfolio %>
+        <strong><%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %></strong>
+    </li>
     <% end %>
-  </ul>
+</ul>
+
+<script type="text/javascript">
+    $(function() {
+        var $projects = $('#project_portfolios');
+        var $projectsClone = $projects.clone();
+        $('#filter a').click(function() {
+            var tag = $(this).html();
+            if(tag == 'all') {
+                var $filteredProjects = $projectsClone.find('li');
+            } else {
+                var $filteredProjects = $projectsClone.find('li[data-type*=' + tag + ']');
+            }
+            $projects.quicksand($filteredProjects, {
+                duration : 800
+            });
+        });
+    });
+</script>
 <% end %>
 
-<%= render :partial => "/shared/content_page" %>
+<%= render :partial => "/shared/content_page" %> 
