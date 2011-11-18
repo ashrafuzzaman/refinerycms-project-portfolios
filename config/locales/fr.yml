@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    project_portfolios:
+      title: Project Portfolios
+  admin:
+    project_portfolios:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Project Portfolio
+        reorder: Réordonner les Project Portfolios
+        reorder_done: Fin de réordonnancement des Project Portfolios
+      records:
+        title: Project Portfolios
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Project Portfolio. Cliquer sur "Créer un(e) nouve(au/l/lle) Project Portfolio" pour créer votre premi(er/ère) project portfolio.'
+      project_portfolio:
+        view_live_html: Voir ce(t/tte) project portfolio <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) project portfolio
+        delete: Supprimer définitivement ce(t/tte) project portfolio
+  project_portfolios:
+    show:
+      other: Autres Project Portfolios

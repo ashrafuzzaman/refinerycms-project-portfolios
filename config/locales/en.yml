@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    project_portfolios:
+      title: Project Portfolios
+  admin:
+    project_portfolios:
+      actions:
+        create_new: Add New Project Portfolio
+        reorder: Reorder Project Portfolios
+        reorder_done: Done Reordering Project Portfolios
+      records:
+        title: Project Portfolios
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Project Portfolios yet. Click "Add New Project Portfolio" to add your first project portfolio.
+      project_portfolio:
+        view_live_html: View this project portfolio live <br/><em>(opens in a new window)</em>
+        edit: Edit this project portfolio
+        delete: Remove this project portfolio forever
+  project_portfolios:
+    show:
+      other: Other Project Portfolios

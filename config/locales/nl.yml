@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    project_portfolios:
+      title: Project Portfolios
+  admin:
+    project_portfolios:
+      actions:
+        create_new: Maak een nieuwe Project Portfolio
+        reorder: Wijzig de volgorde van de Project Portfolios
+        reorder_done: Klaar met het wijzingen van de volgorde van de Project Portfolios
+      records:
+        title: Project Portfolios
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Project Portfolios. Druk op 'Maak een nieuwe Project Portfolio' om de eerste aan te maken.
+      project_portfolio:
+        view_live_html: Bekijk deze project portfolio op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze project portfolio
+        delete: Verwijder deze project portfolio voor eeuwig
+  project_portfolios:
+    show:
+      other: Andere Project Portfolios

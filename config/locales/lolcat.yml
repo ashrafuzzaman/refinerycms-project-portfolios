@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    project_portfolios:
+      title: Project Portfolios
+  admin:
+    project_portfolios:
+      actions:
+        create_new: CREATE NEW Project Portfolio
+        reorder: REORDR Project Portfolios
+        reorder_done: DUN REORDERIN Project Portfolios
+      records:
+        title: Project Portfolios
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Project Portfolios YET. CLICK "CREATE NEW Project Portfolio" 2 ADD UR FURST project portfolio.
+      project_portfolio:
+        view_live_html: VIEW DIS project portfolio LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS project portfolio
+        delete: REMOOV DIS project portfolio FOREVR
+  project_portfolios:
+    show:
+      other: OTHR Project Portfolios

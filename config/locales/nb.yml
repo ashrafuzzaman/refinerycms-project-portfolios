@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    project_portfolios:
+      title: Project Portfolios
+  admin:
+    project_portfolios:
+      actions:
+        create_new: Lag en ny Project Portfolio
+        reorder: Endre rekkefølgen på Project Portfolios
+        reorder_done: Ferdig å endre rekkefølgen Project Portfolios
+      records:
+        title: Project Portfolios
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Project Portfolios enda. Klikk på "Lag en ny Project Portfolio" for å legge til din første project portfolio.
+      project_portfolio:
+        view_live_html: Vis hvordan denne project portfolio ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne project portfolio
+        delete: Fjern denne project portfolio permanent
+  project_portfolios:
+    show:
+      other: Andre Project Portfolios

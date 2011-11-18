@@ -1,0 +1,17 @@
+
+
+<% content_for :before_javascript_libraries do %>
+    <%= javascript_include_tag "jquery.quicksand.js" %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <ul id="project_portfolios">
+    <% @project_portfolios.each do |project_portfolio| %>
+      <li>
+        <%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
