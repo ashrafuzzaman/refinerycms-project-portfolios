@@ -1,0 +1,64 @@
+/* This is styles for the grid portfolio layout */
+.image-grid {
+    width: 700px;
+    list-style: none;
+}
+.image-grid li img{
+    width: 128px;
+    max-height: 75px;
+}
+.image-grid li {
+    width: 128px;
+    margin: 20px 0 0 20px;
+    float: left;
+    text-align: center;
+    line-height: 17px;
+    height: 100px;
+    overflow: hidden;
+}
+.image-grid li img, .image-grid li strong {
+    display: block;
+}
+.image-grid li strong {
+    color: #fff;
+}
+
+
+
+/* This is styles for the popup */
+.popup {
+  background: #6C5D48;
+  border: 2px solid #A89479;
+  -moz-box-shadow: 0px 0px 7px #777;
+  -webkit-box-shadow: 0px 0px 7px #777;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  width: 800px;
+}
+.popup .bClose {
+  cursor: pointer;
+}
+.popup h2{
+  color: #BEB09A;
+  margin: 0px;
+}
+.popup .title {
+  padding: 7px 12px 7px 12px;
+  background: #322511;
+  text-shadow: 0px 1px 1px #000;
+}
+.popup .content{
+  margin: 10px;
+}
+.popup .content img{
+  margin: 0px 10px 10px 0px;
+  border: 2px solid #A89479;
+  -moz-box-shadow: 5px 5px 5px #333;
+  -webkit-box-shadow: 5px 5px 5px #333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+}
+.popup p{
+  color: #DFDCD8;
+}

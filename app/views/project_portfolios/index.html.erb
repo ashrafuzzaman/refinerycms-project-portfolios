@@ -1,3 +1,23 @@
+<% content_for :head do %>
+<%= javascript_include_tag 'jquery.quicksand.js' %>
+<%= javascript_include_tag 'jquery.easing.js' %>
+<%= javascript_include_tag 'jquery.bpopup.js' %>
+<link href="stylesheets/portfolio.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    function attatch_popup(element_id) {
+        $('#'+ element_id).click(function() {
+            $('#popup_content'+ element_id).openPopup({amsl:50, fadeSpeed:500, opacity:0.8});
+                return false;
+            });
+    }
+
+    $(document).ready(function(){
+    <% @project_portfolios.each do |project_portfolios| %>
+        attatch_popup("<%= project_portfolios.id %>");
+    <% end %>});
+</script>
+<% end %>
+
 <% content_for :body_content_left do %>
 <form id="filter">
     <fieldset>
@@ -5,21 +25,20 @@
             Tags
         </legend>
         <label><a href="#">all</a></label>
-        <% @tags.each do |tag| %>
-            <label><a href="#"><%= tag.name %> </a></label>
+        <% @tags.each do |tag| %> <label><a href="#"><%= tag.name %> </a></label>
         <% end %>
     </fieldset>
 </form>
-
-<ul id="project_portfolios">
+<ul id="project_portfolios" class="image-grid">
     <% @project_portfolios.each do |project_portfolio| %>
-    <li data-id="id-1" data-type="<%= project_portfolio.tag_list %>">
-        <%= load_thumbnail project_portfolio %>
-        <strong><%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %></strong>
+    <li data-id="id-<%= project_portfolio.id %>" data-type="<%= project_portfolio.tag_list %>">
+        <a id="<%= project_portfolio.id %>" href="#">
+            <%= load_thumbnail project_portfolio %>
+            <strong><%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %></strong>
+        </a>
     </li>
     <% end %>
 </ul>
-
 <script type="text/javascript">
     $(function() {
         var $projects = $('#project_portfolios');
@@ -32,11 +51,30 @@
                 var $filteredProjects = $projectsClone.find('li[data-type*=' + tag + ']');
             }
             $projects.quicksand($filteredProjects, {
-                duration : 800
+                duration : 800,
+                easing : 'easeInOutQuad'
             });
         });
     });
+
 </script>
 <% end %>
 
-<%= render :partial => "/shared/content_page" %> 
+<%= render :partial => "/shared/content_page" %>
+
+<% @project_portfolios.each do |project_portfolio| %>
+<div class="popup" style="display: none;" id="popup_content<%= project_portfolio.id %>">
+    <div class="title">
+        <h2><%= project_portfolio.project_name %><span style="float: right;" class="bClose close_icon"></span></h2>
+    </div>
+    <div class="content" style="clear: both;">
+        <h3><%= project_portfolio.title %></h3>
+        <div style="float: left;" width="400">
+            <%= load_thumbnail project_portfolio %>
+        </div>
+        <div>
+            <%= project_portfolio.description %>
+        </div>
+    </div>
+</div>
+<% end %> 

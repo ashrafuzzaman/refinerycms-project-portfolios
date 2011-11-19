@@ -1,6 +1,11 @@
 # Project Portfolios engine for Refinery CMS.
 This cretes a tagged list of portfolio.
 
+# Plugins used
+## Javascript
+* Jquery - http://jquery.com/
+* Quicksand - http://razorjack.net/quicksand/
+* bpopup - http://dinbror.dk/bpopup/
 ## Dependencies
 * acts-as-taggable-on
 
