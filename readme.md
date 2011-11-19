@@ -8,6 +8,8 @@ This cretes a tagged list of portfolio.
 * bpopup - http://dinbror.dk/bpopup/
 ## Dependencies
 * acts-as-taggable-on
+## Tag cloud css
+* ButtonMaker - http://css-tricks.com/examples/ButtonMaker
 
 ## Installation (as a plugin)
 bundle install

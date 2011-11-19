@@ -1,4 +1,47 @@
-/* This is styles for the grid portfolio layout */
+/* Tags */
+#tags {
+    margin-top: 10px;
+}
+#tags a {
+    text-decoration: none;
+}
+
+#tags label {
+    margin-left: 5px;;
+}
+.button {
+   border-top: 1px solid #987b48;
+   background: #987b48;
+   background: -webkit-gradient(linear, left top, left bottom, from(#322511), to(#987b48));
+   background: -webkit-linear-gradient(top, #322511, #987b48);
+   background: -moz-linear-gradient(top, #322511, #987b48);
+   background: -ms-linear-gradient(top, #322511, #987b48);
+   background: -o-linear-gradient(top, #322511, #987b48);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #302410;
+   background: #302410;
+   color: #ccc;
+   }
+.active {
+   border-top-color: #302410;
+   background: #302410;
+   }
+
+/* grid portfolio layout */
 .image-grid {
     width: 700px;
     list-style: none;
@@ -25,7 +68,7 @@
 
 
 
-/* This is styles for the popup */
+/* popup */
 .popup {
   background: #6C5D48;
   border: 2px solid #A89479;
