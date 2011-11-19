@@ -12,14 +12,14 @@
     }
 
     $(document).ready(function(){
-    <% @project_portfolios.each do |project_portfolios| %>
-        attatch_popup("<%= project_portfolios.id %>");
+    <% @portfolios.each do |portfolio| %>
+        attatch_popup("<%= portfolio.id %>");
     <% end %>});
 </script>
 <% end %>
 
 <% content_for :body_content_left do %>
-<form id="filter">
+<div>
     <fieldset>
         <legend>
             Tags
@@ -28,20 +28,20 @@
         <% @tags.each do |tag| %> <label><a href="#"><%= tag.name %> </a></label>
         <% end %>
     </fieldset>
-</form>
-<ul id="project_portfolios" class="image-grid">
-    <% @project_portfolios.each do |project_portfolio| %>
-    <li data-id="id-<%= project_portfolio.id %>" data-type="<%= project_portfolio.tag_list %>">
-        <a id="<%= project_portfolio.id %>" href="#">
-            <%= load_thumbnail project_portfolio %>
-            <strong><%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %></strong>
+</div>
+<ul id="portfolio" class="image-grid">
+    <% @portfolios.each do |portfolio| %>
+    <li data-id="id-<%= portfolio.id %>" data-type="<%= portfolio.tag_list %>">
+        <a id="<%= portfolio.id %>" href="#">
+            <%= render_thumbnail portfolio %>
+            <strong><%= link_to portfolio.project_name, project_portfolio_path(portfolio) %></strong>
         </a>
     </li>
     <% end %>
 </ul>
 <script type="text/javascript">
     $(function() {
-        var $projects = $('#project_portfolios');
+        var $projects = $('#portfolio');
         var $projectsClone = $projects.clone();
         $('#filter a').click(function() {
             var tag = $(this).html();
@@ -62,19 +62,6 @@
 
 <%= render :partial => "/shared/content_page" %>
 
-<% @project_portfolios.each do |project_portfolio| %>
-<div class="popup" style="display: none;" id="popup_content<%= project_portfolio.id %>">
-    <div class="title">
-        <h2><%= project_portfolio.project_name %><span style="float: right;" class="bClose close_icon"></span></h2>
-    </div>
-    <div class="content" style="clear: both;">
-        <h3><%= project_portfolio.title %></h3>
-        <div style="float: left;" width="400">
-            <%= load_thumbnail project_portfolio %>
-        </div>
-        <div>
-            <%= project_portfolio.description %>
-        </div>
-    </div>
-</div>
-<% end %> 
+<% @portfolios.each do |portfolio| %>
+    <%= render :partial => 'popup_portfolio', :locals => {:portfolio => portfolio} %>
+<% end %>

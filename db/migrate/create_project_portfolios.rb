@@ -6,6 +6,8 @@ class CreateProjectPortfolios < ActiveRecord::Migration
       t.string :title
       t.integer :thumbnail_id
       t.string :thumbnail_url
+      t.integer :image_id
+      t.string :image_url
       t.text :description
       t.integer :position
 

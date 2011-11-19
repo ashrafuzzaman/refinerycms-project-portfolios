@@ -30,6 +30,21 @@
   </div>
   
   <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => @project_portfolio.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+    OR  
+  <div class='field'>
+    <%= f.label :image_url -%>
+    <%= f.text_field :image_url  -%>
+  </div>
+  
+  <div class='field'>
     <%= f.label :tag_list -%>
     <%= f.text_field :tag_list  -%>
   </div>
