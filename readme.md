@@ -12,6 +12,8 @@ This cretes a tagged list of portfolio.
 * ButtonMaker - http://css-tricks.com/examples/ButtonMaker
 
 ## Installation (as a plugin)
+Add acts-as-taggable-on gem to Gemfile
+  gem 'acts-as-taggable-on', '~>2.1.0'
 bundle install
 script/plugin install git@github.com:ashrafuzzaman/refinerycms-project-portfolios.git
 rails generate refinerycms_project_portfolios

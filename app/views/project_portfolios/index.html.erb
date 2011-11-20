@@ -4,19 +4,16 @@
 <%= javascript_include_tag 'jquery.bpopup.js' %>
 <link href="stylesheets/portfolio.css" media="screen" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
-    function attatch_popup(element_id) {
-        $('#'+ element_id).click(function() {
+    function attatch_all_popup() {
+        $('#portfolios a').click(function() {
+            var element_id = $(this).attr("popup-id");
             $('#popup_content'+ element_id).openPopup({amsl:50, fadeSpeed:500, opacity:0.8});
-                return false;
-            });
+            return false;
+        });
     }
 
     $(document).ready(function(){
-    <% @portfolios.each do |portfolio| %>
-        attatch_popup("<%= portfolio.id %>");
-    <% end %>
-    
-    
+        attatch_all_popup();
     });
 
     $(function() {
@@ -34,6 +31,8 @@
             $projects.quicksand($filteredProjects, {
                 duration : 800,
                 easing : 'easeInOutQuad'
+            }, function() { // when done shuffling
+                 attatch_all_popup();
             });
         });
     });
@@ -53,7 +52,7 @@
 <ul id="portfolios" class="image-grid">
     <% @portfolios.each do |portfolio| %>
     <li class="box" data-id="id-<%= portfolio.id %>" data-type="<%= portfolio.tag_list %>">
-        <a id="<%= portfolio.id %>" href="#">
+        <a popup-id="<%= portfolio.id %>" href="#">
             <%= render_thumbnail portfolio %>
             <strong><%= portfolio.project_name %></strong>
         </a>
