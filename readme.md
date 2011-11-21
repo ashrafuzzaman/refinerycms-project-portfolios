@@ -15,16 +15,17 @@ This cretes a tagged list of portfolio.
 Add acts-as-taggable-on gem to Gemfile
   gem 'acts-as-taggable-on', '~>2.1.0'
 bundle install
-script/plugin install git@github.com:ashrafuzzaman/refinerycms-project-portfolios.git
+rails plugin install https://github.com/ashrafuzzaman/refinerycms-project-portfolios.git
 rails generate refinerycms_project_portfolios
 rails generate acts_as_taggable_on:migration
 rake db:migrate
 
-## How to build this engine as a gem
+## Install as gem
+Add acts-as-taggable-on gem to Gemfile
+gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'refinerycms-project-portfolios', '>=1.0'
 
-    cd vendor/engines/project_portfolios
-    gem build refinerycms-project_portfolios.gemspec
-    gem install refinerycms-project_portfolios.gem
-    
-    # Sign up for a http://rubygems.org/ account and publish the gem
-    gem push refinerycms-project_portfolios.gem
+bundle install
+rails generate acts_as_taggable_on:migration
+rails generate refinerycms_project_portfolios
+rake db:migrate
