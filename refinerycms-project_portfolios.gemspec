@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
-  s.name              = 'refinerycms-project-portfolios'
+  s.name              = 'refinerycms-project_portfolios'
   s.version           = '1.0'
   s.author            = 'A.K.M. Ashrafuzzaman'
   s.email             = %q{ashrafuzzaman.g2@gmail.com}

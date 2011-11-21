@@ -15,15 +15,11 @@ This cretes a tagged list of portfolio.
 
 ## Installation (as a plugin)
 Add acts-as-taggable-on gem to Gemfile
-
 gem 'acts-as-taggable-on', '~>2.1.0'
-
 bundle install
 
 rails plugin install https://github.com/ashrafuzzaman/refinerycms-project-portfolios.git
-
 rails generate refinerycms_project_portfolios
-
 rails generate acts_as_taggable_on:migration
 
 rake db:migrate
@@ -31,15 +27,16 @@ rake db:migrate
 ## Install as gem
 
 Add acts-as-taggable-on gem to Gemfile
-
 gem 'acts-as-taggable-on', '~>2.1.0'
-
-gem 'refinerycms-project-portfolios', '>=1.0'
+gem 'refinerycms-project_portfolios', '>=1.0'
 
 bundle install
 
 rails generate acts_as_taggable_on:migration
-
 rails generate refinerycms_project_portfolios
 
 rake db:migrate
+
+##Note
+In the application.html.erb add the following in the HEAD of HTML 
+<%= yield :head %>
