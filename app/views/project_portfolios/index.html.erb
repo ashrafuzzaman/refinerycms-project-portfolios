@@ -17,18 +17,18 @@
     });
 
     $(function() {
-        var $projects = $('#portfolios');
-        var $projectsClone = $projects.clone();
+        var projects = $('#portfolios');
+        var projectsClone = projects.clone();
         $('#tags a').click(function() {
             $('#tags label').removeClass("active");
             var tag = $(this).html();
             $(this).parent().addClass("active");
             if(tag == 'all') {
-                var $filteredProjects = $projectsClone.find('li');
+                var filteredProjects = projectsClone.find('li');
             } else {
-                var $filteredProjects = $projectsClone.find('li[data-type*=' + tag + ']');
+                var filteredProjects = projectsClone.find('li[data-type*=' + tag + ']');
             }
-            $projects.quicksand($filteredProjects, {
+            projects.quicksand(filteredProjects, {
                 duration : 800,
                 easing : 'easeInOutQuad'
             }, function() { // when done shuffling

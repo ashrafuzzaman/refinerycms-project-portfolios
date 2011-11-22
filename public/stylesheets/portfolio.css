@@ -122,3 +122,9 @@
 .popup p{
   color: #DFDCD8;
 }
+
+.close_icon {
+    background: url("/images/close_yellow_icon.png") no-repeat scroll 0 0 transparent;
+    height: 24px;
+    width: 24px;
+}
