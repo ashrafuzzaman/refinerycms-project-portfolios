@@ -19,6 +19,9 @@ Add acts-as-taggable-on gem to Gemfile<br>
 <blockquote>
 gem 'acts-as-taggable-on', '~>2.1.0'<br>
 gem 'refinerycms-project_portfolios', '~>0.0.3'<br>
+</blockquote>
+Then run
+<blockquote>
 bundle install<br>
 rails generate acts_as_taggable_on:migration<br>
 rails generate refinerycms_project_portfolios<br>
@@ -28,10 +31,10 @@ rake db:migrate<br>
 ## Note ##
 In the application.html.erb add the following sections<br>
 <blockquote>
-    <%= yield :javascripts %><br>
+<%= yield :javascripts %>
 </blockquote>
 And you need to add jquery to the Header<br>
 <blockquote>
-    <%= javascript_include_tag 'jquery.js' %><br>
+<%= javascript_include_tag 'jquery.js' %>
 </blockquote>
 A sample stylesheet is given with the plugin in "public/stylesheets/portfolio.css"
