@@ -1,9 +1,5 @@
-<% content_for :head do %>
-<%= javascript_include_tag 'jquery.quicksand.js' %>
-<%= javascript_include_tag 'jquery.easing.js' %>
-<%= javascript_include_tag 'jquery.bpopup.js' %>
-<%= javascript_include_tag 'portfolio.js' %>
-<link href="stylesheets/portfolio.css" media="screen" rel="stylesheet" type="text/css" />
+<% content_for :javascripts do %>
+    <%= javascript_include_tag 'portfolio.min.js' %>
 <% end %>
 
 <% content_for :body_content_left do %>

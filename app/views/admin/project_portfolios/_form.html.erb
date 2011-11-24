@@ -11,37 +11,23 @@
     <%= f.label :title -%>
     <%= f.text_field :title  -%>
 </div>
-<div class='block'>
-    <div class='field'>
-        <%= f.label :thumbnail -%>
-        <%= render :partial => "/shared/admin/image_picker", :locals => {
-          :f => f,
-          :field => :thumbnail_id,
-          :image => @project_portfolio.thumbnail,
-          :toggle_image_display => false
-          } %>
-    </div>
-    OR
-    <div class='field'>
-        <%= f.label :thumbnail_url -%>
-        <%= f.text_field :thumbnail_url  -%>
-    </div>
+<div class='field'>
+    <%= f.label :thumbnail -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :thumbnail_id,
+      :image => @project_portfolio.thumbnail,
+      :toggle_image_display => false
+      } %>
 </div>
-<div class='block'>
-    <div class='field'>
-        <%= f.label :image -%>
-        <%= render :partial => "/shared/admin/image_picker", :locals => {
-          :f => f,
-          :field => :image_id,
-          :image => @project_portfolio.image,
-          :toggle_image_display => false
-          } %>
-    </div>
-    OR
-    <div class='field'>
-        <%= f.label :image_url -%>
-        <%= f.text_field :image_url  -%>
-    </div>
+<div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :image_id,
+      :image => @project_portfolio.image,
+      :toggle_image_display => false
+      } %>
 </div>
 <div class='field'>
     <%= f.label :tag_list -%>

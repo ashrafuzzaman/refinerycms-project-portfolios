@@ -1,0 +1,10 @@
+embed_assets: on
+package_assets: always
+package_path: javascripts
+
+javascripts:
+  portfolio.min:
+    - public/javascripts/jquery.quicksand.js
+    - public/javascripts/jquery.easing.js
+    - public/javascripts/jquery.bpopup.js
+    - public/javascripts/portfolio.js
