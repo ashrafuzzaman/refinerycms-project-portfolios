@@ -30,11 +30,11 @@ rake db:migrate<br>
 
 ## Note ##
 In the application.html.erb add the following sections<br>
-<blockquote>
+```ruby
 <%= yield :javascripts %>
-</blockquote>
-And you need to add jquery to the Header<br>
-<blockquote>
+```
+<br>And you need to add jquery to the Header<br>
+```ruby
 <%= javascript_include_tag 'jquery.js' %>
-</blockquote>
-A sample stylesheet is given with the plugin in "public/stylesheets/portfolio.css"
+```
+<br>A sample stylesheet is given with the plugin in "public/stylesheets/portfolio.css"
