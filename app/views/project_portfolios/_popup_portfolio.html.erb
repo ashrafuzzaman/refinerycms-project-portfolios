@@ -1,13 +1,13 @@
 <div class="popup" style="display: none;" id="popup_content<%= portfolio.id %>">
-    <div class="title">
+    <div class="popup-title">
         <h2><%= portfolio.project_name %><span style="float: right;" class="bClose close_icon"></span></h2>
     </div>
-    <div class="content" style="clear: both;">
+    <div class="popup-content" style="clear: both;">
         <h3><%= portfolio.title %></h3>
-        <div style="float: left;" class="img">
+        <div class="popup-img">
             <%= render_image portfolio %>
         </div>
-        <div>
+        <div class="popup-description">
             <%= portfolio.description.html_safe %>
         </div>
     </div>

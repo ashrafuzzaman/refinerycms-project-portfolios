@@ -22,7 +22,7 @@ $(function() {
     var projects = $('#portfolios');
     var projectsClone = projects.clone();
     $('#tags a').click(function() {
-        $('#tags label').removeClass("active");
+        $('#tags .button').removeClass("active");
         var tag = $(this).html();
         $(this).parent().addClass("active");
         if(tag == 'all') {

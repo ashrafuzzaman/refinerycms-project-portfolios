@@ -3,24 +3,26 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-<div>
-    <div id="tags">
-        <label class="button active"><a href="#">all</a></label>
+<div class="tags-div">
+    <ul id="tags">
+        <li class="button active"><a href="#">all</a></li>
         <% @tags.each do |tag| %>
-            <label class="button"><a href="#"><%= tag.name %> </a></label>
+            <li class="button"><a href="#"><%= tag.name %> </a></li>
         <% end %>
-    </div>
+    </ul>
 </div>
+<div class="image-grid-div">
 <ul id="portfolios" class="image-grid">
     <% @portfolios.each do |portfolio| %>
-    <li class="box" data-id="id-<%= portfolio.id %>" data-type="<%= portfolio.tag_list.to_s.delete ' ' %>">
-        <a popup-id="<%= portfolio.id %>" href="#">
+    <li class="thumbnail-box" data-id="id-<%= portfolio.id %>" data-type="<%= portfolio.tag_list.to_s.delete ' ' %>">
+        <a class="popup-link" popup-id="<%= portfolio.id %>" href="#">
             <%= render_thumbnail portfolio %>
-            <strong><%= portfolio.project_name %></strong>
+            <strong class="popup-project-title"><%= portfolio.project_name %></strong>
         </a>
     </li>
     <% end %>
 </ul>
+</div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
