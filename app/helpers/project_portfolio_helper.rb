@@ -1,20 +1,15 @@
 module ProjectPortfolioHelper
+  def render_title(portfolio)
+    "<h3>#{portfolio.title}</h3>".html_safe if !portfolio.title.blank?
+  end
+  
   def render_thumbnail(portfolio)
-    #if portfolio.thumbnail_url.blank?
-    #  image_fu portfolio.thumbnail, nil
-    #else
-    #  image_tag(portfolio.thumbnail_url)
-    #end
-    image_fu portfolio.thumbnail, :medium
+    portfolio_thumbnail_size = RefinerySetting.find_or_set(:portfolio_thumbnail_size, '126x80#c', :destroyable => false)
+    image_fu portfolio.thumbnail, portfolio_thumbnail_size
   end
 
   def render_image(portfolio)
-    #if portfolio.image_url.blank?
-    #  image_fu portfolio.image, :width => '400'
-    #elsif portfolio.image_url.present?
-    #  image_tag(portfolio.image_url, :width => '400')
-    #end
-    image_fu portfolio.image, nil
+    image_fu portfolio.image, :medium
   end
 
 end

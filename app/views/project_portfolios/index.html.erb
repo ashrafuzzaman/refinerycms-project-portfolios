@@ -14,7 +14,7 @@
 <div class="image-grid-div">
 <ul id="portfolios" class="image-grid">
     <% @portfolios.each do |portfolio| %>
-    <li class="thumbnail-box" data-id="id-<%= portfolio.id %>" data-type="<%= portfolio.tag_list.to_s.delete ' ' %>">
+    <li class="thumbnail-box" data-id="id-<%= portfolio.id %>" data-type="-<%= portfolio.tag_list.join('-').to_s.delete ' ' %>-">
         <a class="popup-link" popup-id="<%= portfolio.id %>" href="#">
             <%= render_thumbnail portfolio %>
             <strong class="popup-project-title"><%= portfolio.project_name %></strong>

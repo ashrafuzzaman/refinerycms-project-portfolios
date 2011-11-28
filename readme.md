@@ -18,7 +18,7 @@ This cretes a tagged list of portfolio.
 Add acts-as-taggable-on gem to Gemfile<br>
 <blockquote>
 gem 'acts-as-taggable-on', '~>2.1.0'<br>
-gem 'refinerycms-project_portfolios', '~>0.0.3'<br>
+gem 'refinerycms-project_portfolios', '~>0.0.5'<br>
 </blockquote>
 Then run
 <blockquote>

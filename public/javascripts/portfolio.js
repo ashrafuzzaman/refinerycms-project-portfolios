@@ -28,7 +28,7 @@ $(function() {
         if(tag == 'all') {
             var filteredProjects = projectsClone.find('li');
         } else {
-            var filteredProjects = projectsClone.find('li[data-type*=' + removeSpaces(tag) + ']');
+            var filteredProjects = projectsClone.find('li[data-type*=-' + removeSpaces(tag) + '-]');
         }
         projects.quicksand(filteredProjects, {
             duration : 800,
