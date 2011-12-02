@@ -6,6 +6,7 @@ to shows related projects to viewer. The project details can showed in a popup.<
 Clicking on the projects will open the project detail popup.<br>
 
 ![PortfolioDetail](http://lh6.googleusercontent.com/-Ms5K3O6qejg/TtSkTyie_JI/AAAAAAAAM8c/KVTxVYLUZ1U/s800/Portfolio%252520popup.png "Portfolio detail")
+You can view my portfolio [here](http://www.ashrafuzzaman.com/project_portfolios) to see how it works.
 
 # Plugins used #
 ## Javascript ##
